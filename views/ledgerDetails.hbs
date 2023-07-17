@@ -1,0 +1,277 @@
+{{!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ledger Details</title>
+</head>
+
+<body>
+
+    <style>
+        .drcr {
+            display: flex;
+            gap: 15rem;
+        }
+
+        .head {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .data {
+            margin-left: 34px;
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+        }
+
+        .data1 {
+            margin-left: -24px;
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+        }
+    </style>
+
+    <h3>welcome to the ledger dashboard</h3>
+    --}}
+    {{!-- <table border="1px">
+
+        <div class="drcr">
+            <h3>Dr.</h3>
+            <h3>Cr.</h3>
+        </div>
+
+        <thead class="head">
+
+            <tr class="head">
+
+                <th>Description</th>
+                <th>Amount</th>
+
+            </tr>
+
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+
+        <tbody class="head">
+            {{#each ledgerData}}
+            <tr class="data">
+                <td> To {{this.description}}</td>
+                <td>{{this.amount}}</td>
+
+            </tr>
+            {{/each}}
+
+            <tr class="data1">
+                {{#each ledgerData}}
+            <tr>
+                <td> By {{this.description2}}</td>
+                <td>{{this.amount2}}</td>
+            </tr>
+            {{/each}}
+
+
+            </tr>
+
+        </tbody>
+
+    </table> --}}
+
+
+
+
+
+    {{!-- 2nd table --}}
+
+    {{!-- <table border="1px">
+        <div class="drcr">
+            <h3>Cr.</h3>
+            <h3>Dr.</h3>
+
+        </div>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>amount</th>
+                <th>Description</th>
+                <th>amount</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each ledgerData}}
+            <tr>
+                <td> By{{this.description2}}</td>
+                <td>{{this.amount2}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table> --}}
+
+
+
+
+    {{!--
+</body>
+
+</html> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- ledger account --}}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ledger</title>
+</head>
+
+<body>
+
+
+    <style>
+        * {
+            color: black;
+
+        }
+
+        hr {
+            height: 0;
+            border: 0;
+            margin: 0;
+            border-top: 1px solid black;
+            border-bottom: 1px solid #383838;
+        }
+
+     
+
+        table {
+            border-collapse: collapse;
+            font: 20px Calibri Light, sans-serif;
+            border-color: transparent;
+            text-align: center;
+        }
+
+        th {
+            border-bottom: 1px solid;
+        }
+
+        td {
+            padding: 10px;
+            border: 0;
+        }
+
+        .borderline {
+            border-right: 1px solid;
+        }
+
+        .date {
+            width: 50px;
+        }
+
+        .crossref {
+            width: 300px;
+        }
+
+        .figure {
+            width: 70px;
+        }
+        .drcr{
+            display: flex;
+            gap: 56rem;
+        }
+    </style>
+
+
+    <h3>welcome to the ledger dashboard</h3>
+
+    <table id="ledger" border="1">
+        <div class="drcr">
+            <h3>Dr.</h3>
+            {{!-- <h3>Cr.</h3> --}}
+        </div>
+        {{#each journalEntry}}
+        <tr>
+            <th colspan="6">{{this.select0}}</th>
+        </tr>
+        {{/each}}
+        
+        <tr>
+            <th>Date</th>
+            <th>Particulars</th>
+            <th>Amount</th>
+           
+
+        </tr>
+        {{#each journalEntry}}
+        <tr>
+            <td class="date">{{this.date}}</td>
+            <td class="crossref">{{this.select1}}</td>
+            <td class="figure borderline">{{this.amount1}}</td>
+            {{!-- <td class="date">{{this.date}}</td>
+            <td class="crossref">{{this.select0}}</td>
+            <td class="figure">{{this.amount1}}</td> --}}
+        </tr>
+        {{/each}}
+        
+    </table>
+
+
+
+
+    <table id="ledger" border="1">
+        <div class="drcr">
+            <h3>Cr.</h3>
+        </div>
+        {{#each journalEntry}}
+        <tr>
+            <th colspan="6">{{this.select1}}</th>
+        </tr>
+        {{/each}}
+        
+        <tr>
+            <th>Date</th>
+            <th>Particulars</th>
+            <th>Amount</th>
+
+        </tr>
+
+        {{#each journalEntry}}
+        <tr>
+            <td class="date">{{this.date}}</td>
+            <td class="crossref">{{this.select0}}</td>
+            <td class="figure">{{this.amount1}}</td>
+        </tr>
+        {{/each}}
+        
+    </table>
+
+    
+
+</body>
+
+</html>

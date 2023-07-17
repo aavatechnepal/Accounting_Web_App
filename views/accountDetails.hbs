@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addneworg</title>
+    <link rel="stylesheet" href="/CSS/signup.css" />
+    <link rel="stylesheet" href="/CSS/style.css">
+  </head>
+  <body>
+
+    <style>      
+        p{
+            color : #34BA82;
+            font-size: 19px;
+        }
+    </style>
+
+      <form action="/accountDetails" method="post" class="signup">
+      <h3 class="heading">Accounting Details</h3>
+      <p>Step 2 of 3</p>
+      <input type="number" name="panNumber" id="" placeholder="PAN number">
+      {{!-- <input type="date" name="" id=""> --}}
+      <input type="text" name = "date" placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
+      <input type="text" name="registerAddress" id="" placeholder="Register Adderss">
+      <button class="btn_signup">Next:Company profile</button>
+      <p>{{message}}</p>
+      </form>
+
+      <div class="testing">
+
+      </div>
+
+        
+
+        
+      
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add row</title>
+</head>
+<body>
+    
+
+
+
+    
+<form class="form" action="/journalEntry" method="post">
+  <div class="formData">
+      <select name="select" id="">
+   {{#each journalEntryData}}
+    <option value="">{{this.description}}</option>
+    {{/each}}
+  </select>
+
+   <select name="accountType" id="" class="drCr">
+    <option value="cr">Cr.</option>
+    <option value="dr">Dr.</option>
+  </select>
+
+  <input type="number" name="amount" id="" placeholder="Amount" class="amount">
+  </div>
+
+  
+</form>
+
+
+
+<script>
+    
+</script>
+
+
+
+
+</body>
+</html>

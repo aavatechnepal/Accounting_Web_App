@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legder</title>
+</head>
+<style>
+
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px 20px;
+        text-align: center;
+}
+.heading{
+    margin-left: 44px;
+    font-size: 2rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ 
+</style>
+<body>
+
+    <div class="companyData">
+        {{!-- <h3>HI, {{this.compayName}} </h3> --}}
+        <h3 class="heading">Hi, User ! </h3>
+    </div>
+
+
+    <div class="account">
+        <h2 style="margin-left: 8%;">Salary a/c</h2>
+    </div>
+    <table>
+        <tr>
+            <th>Particulars</th>
+            <th>Dr. Amount</th>
+            <th>Cr. Amount</th>
+        </tr>
+        {{#each journalData}}
+        <tr>
+            <td>{{this.journal2}}</td>
+            <td>{{this.amount2}}</td>
+            <td></td>
+        </tr>
+        {{/each}}
+        
+
+        {{!-- {{#each journalData}}
+        <tr>
+        <td>{{this.journal1}}</td>
+            <td></td>
+            <td>500</td>
+        </tr>
+         {{/each}} --}}
+         
+        {{!-- <tr style="border-top: 2px solid black; border-bottom: 2px solid black;">
+            <th>Total</th>
+            <th>2000</th>
+            <th>500</th>
+        </tr>
+        <tr>
+            <th>Balance</th>
+            <th>1500</th>
+            <th></th>
+        </tr> --}}
+       
+    </table>
+    <div style="margin-top: 20px;">
+        <h2 style="margin-left: 8%;">Bank a/c</h2>
+    </div>
+    <table>
+        <tr>
+            <th>Particulars</th>
+            <th>Dr. Amount</th>
+            <th>Cr. Amount</th>
+        </tr>
+        {{#each journalData}}
+        <tr>
+            <td>{{this.journal1}}</td>
+            <td></td>
+            <td>{{this.amount1}}</td>
+        </tr>
+        {{/each}}
+
+
+        {{!-- {{#each}} --}}
+        {{!-- <tr>
+            <td>Salary a/c</td>
+            <td>500</td>
+            <td></td>
+        </tr>
+        <tr style="border-top: 2px solid black; border-bottom: 2px solid black;">
+            <th>Total</th>
+            <th>500</th>
+            <th>2000</th>
+        </tr>
+        <tr>
+            <th>Balance</th>
+            <th></th>
+            <th>1500</th>
+        </tr> --}}
+
+        {{!-- {{/each}} --}}
+    </table>
+</body>
+</html>

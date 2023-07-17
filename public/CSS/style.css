@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --primary-color : #34BA82;
+    --text-color : #011A41;
+}
+
+.container{
+    max-width: 1260px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+.mainlogo{
+    width: 7%;
+}
+
+
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    color: var(--text-color);
+}
+    
+
+.navlinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-transform: capitalize;
+}
+.navlinks li{
+    list-style: none;
+}
+.navlinks li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.navlinks li a:hover{
+    color: var(--primary-color);
+    transition: 0.8;
+    border-bottom: 1px solid green;
+}
+.menubar{
+    display: none;
+    width: 25px;
+}
+
+.btn{    
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.logBtn .demologin_btn{
+    background: transparent;
+    color: var(--text-color); 
+    border: 1px solid var(--text-color);
+    padding: 16px 35px;
+}
+.logBtn .demologin_btn:hover{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    transition: 0.5s;
+}
+
+.login_btn{
+    border: none;
+    padding: 16px 35px;
+    background-color: var(--primary-color);
+    color: white;
+}
+.login_btn:hover{
+    color: white;
+    background-color: var(--text-color);
+    transition: 0.5s;
+}
+
+
+/* header section */
+
+.headerSec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.headerSec .heading{
+    width: auto;
+    max-width: 900px;
+    /* color: #1d2530; */
+    color: var(--text-color);
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 120%;
+}
+.headerSec .para{
+    color: gray;
+    text-align: center;
+    width: 30%;
+    margin: 23px 0;
+    
+    
+}
+.main_img{
+    margin-top: 100px;
+    text-align: center; 
+}
+.main_img .main_img_bg{
+    width: 100%;
+}
+
+
+/* main section */
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+.left-sec{
+    line-height: 34px;
+}
+
+.left-sec .para{
+    color: gray;
+}
+
+
+
+/* nepal goven section */
+
+.nepalGovr{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #eef1f7;
+    border-radius: 8px;
+    margin-top: 100px;
+    padding: 80px 50px;
+    line-height: 34px;
+
+}
+
+.nepalGovr .logBtn .demologin_btn{
+    margin-top: 34px;
+ 
+}
+.nepalGovr .logBtn .demologin_btn:hover{
+    color: white;
+    background-color: var(--primary-color);
+ 
+}
+.nepalgovr_img{
+    width: 40%;
+}
+
+
+
+
+/* product hightlight section */
+.productsec {
+    margin-top: 80px;
+
+}
+.product .heading{
+    text-align: center;
+    line-height: 100px;
+}
+.product{
+    text-align: center;
+}
+.product_img{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+
+}
+
+.productsec .logBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+  
+
+}
+.productimglogo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 12px;
+    height: 60px;
+}
+
+.productimglogo img{
+    width: 18%;
+}
+
+
+
+
+/* this code or style for js while user click on button to show content */
+
+
+.contentAddingUsingJs{
+    margin-top: 53px;
+}
+
+#paragraph{
+    /* color: red; */
+}
+.jsimg{
+    width: 65%;
+    margin-left: 304px;
+}
+
+.jsContent{
+    display: flex;
+    background-color: #eef1f7;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    height: 434px;
+}
+.leftjs{
+    line-height: 1.5rem;
+   max-width: 558px;
+}
+.leftjs p{
+    width: 100%;
+}
+
+
+
+
+/* testing mode  */
+.testing{
+    height: 444px;
+}
+
+
+
+
+/* media queries for laptop, tablet and phone */
+
+@media screen and (max-width : 1075PX){
+    .container{
+        overflow: hidden;
+    }
+
+   .logBtn{
+    object-fit: fill;
+    flex-wrap: wrap-reverse;
+    overflow: visible;
+   }
+
+   .productsec .logBtn .demologin_btn{
+    width: 263px;
+    }
+}
+
+    @media screen and (max-width : 955px) {
+        .navlinks{
+            /* display: none; */
+            position: absolute;
+            flex-direction: column;
+            top: 15%;
+            background-color: #ffffff;
+            width: 100%;
+            padding-block: 30px;
+            /* opacity: 0; */
+            left: -100%;
+            transition: 1s ease
+
+        }
+
+        .navlinks.active{
+            /* opacity: 1; */
+            left: 0%;
+        }
+        
+
+        
+        
+        .menubar{
+            display: block;
+           
+        }
+        
+    }
+
+    @media screen and (max-width : 735px) {
+        .headerSec .heading{
+            font-size: 32px;
+        }
+        .headerSec .para {
+            width: 42%;
+        }
+        
+        .news{
+            flex-wrap: wrap;
+        }
+
+        .nepalGovr{
+            flex-wrap: wrap;
+        }
+        .nepalgovr_img{
+            width: 80%;
+            margin-top: 34px;
+        }
+
+        
+    }
+
+    @media screen  and (max-width: 450px){
+
+        .navbar{
+            gap: 6rem;
+        }
+
+        .mainlogo {
+            width: 17%;
+        }
+
+      .headerSec .logBtn{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+      }
+
+
+    .headerSec .para {
+        width: 72%;
+    }
+    .logBtn{
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        flex-wrap: wrap;
+    }
+    .login_btn {
+        padding: 16px 56px;
+        
+    }
+
+
+    
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSS/mainDashboard.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <title>mainDashboard</title>
+</head>
+
+<body>
+  {{>navbar}}
+  <section class="main_dashboard container">
+    <h3 class="heading">welcome to the dashboard of Sarathi-Accounting partner</h3>
+
+    <div class="chartofAcc">
+
+      <div class="chartofAcc1">
+        <h3>Chart of Accounts</h3>
+        <p><a href="listchart">Chart Of Accounts</a></p>
+        <p><a href="createChart">Create Chart of Accounts</a></p>
+        {{!-- <p><a href="createChart">Create create a voucher</a></p> --}}
+      </div> <br> <br> <br>
+
+      <div class="reports">
+        <h3>Reports</h3>
+        <p><a href="">Trail Balance</a></p>
+        <p><a href="">Statement of Profit and Loss</a></p>
+        <p><a href="">Statement of Financial Position</a></p>
+        <p><a href="">Fixed Assets Register</a></p>
+        <p><a href="">Debtor Register</a></p>
+        <p><a href="">Creditor Register</a></p>
+      </div> <br> <br> <br>
+
+      <div class="bank">
+        <h3>Bank</h3>
+        <p><a href="">Bank Ledger Report</a></p>
+        <p><a href="">Bank Reconciliation</a></p>
+      </div> <br> <br> <br>
+
+
+      <div class="debtorCreditor">
+        <h3>Debtor / Creditor</h3>
+        <p><a href="">Debtor Report</a></p>
+        <p><a href="">Creditor Report</a></p>
+      </div>
+
+      <div class="fixedAssets">
+        <h3>Fixed Assests Register</h3>
+        <p><a href="">Assets Depreciation Calculation</a></p>
+      </div>
+
+      <div class="LedgerDetail">
+        <h3>Ledger Detail</h3>
+        <p><a href="ledgerDetails">See Ledger Details</a></p>
+      </div>
+
+      <div class="journalEntry">
+        <h3>journalEntry</h3>
+        <p><a href="journalEntry">Enter your Journal</a></p>
+        <p><a href="">See Transaction</a></p>
+        <p><a href="/createYourCompany">Create Your Company</a></p>
+
+
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <script src="/JS/navbar.js"></script>
+</body>
+
+</html>

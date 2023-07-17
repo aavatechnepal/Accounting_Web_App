@@ -1,0 +1,196 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/CSS/createChart.css" />
+  <link rel="stylesheet" href="/CSS/listchart.css" />
+  <title>createChart</title>
+</head>
+
+<body>
+
+  <section class="container searchbar">
+    <input type="text" name="search" id="" placeholder="Search" />
+
+  </section>
+
+  <section class="createChart container">
+
+    <div class="chartform">
+      <h3 class="chartheading"> Create chart of Accounts</h3>
+
+      {{!-- <form action="/createChart" method="post">
+        <input type="text" name="description" id="" placeholder="Description" autocomplete="off" />
+        <input type="text" name="account1" id="" placeholder="Account1" autocomplete="off" />
+
+        <div id="showdata"></div>
+
+        <input type="text" name="account2" id="" placeholder="Account2" autocomplete="off" />
+
+
+        <button class="addBtn" type="submit">Add Data</button>
+      </form> --}}
+
+
+
+
+
+
+
+
+      {{!-- drop downn data --}}
+
+      <form action="/createChart" method="post">
+
+        <input type="text" name="description" id="" placeholder="description">
+
+        <select name="account1" id="meal" onchange=getSelectedValue(this.value)>
+          <option value="" disabled selected>---select---</option>
+          <option value="sfp">SFP</option>
+          <option value="spl">SPL</option>
+        </select>
+
+        <select name="account2" id="category">
+          <option value="" disabled selected></option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+      </form>
+
+
+
+
+
+      <div class="message">
+        <p class="msg">{{message}}</p>
+        <p class="error">{{error}}</p>
+        <a class="see_chart" href="/listchart"> 👉 See the chart of Account list</a>
+      </div>
+    </div>
+
+    <div class="table">
+
+
+      <table border="2px">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Account Type 1</th>
+            <th>Account Type 2</th>
+            <th>Actions</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>staff Salary</td>
+            <td>SPL</td>
+            <td>Assets</td>
+            <td>Edit</td>
+            <td>Delete</td>
+          </tr>
+          <tr>
+            <td>Rent</td>
+            <td>SPL</td>
+            <td>Credior</td>
+            <td>Edit</td>
+            <td>Delete</td>
+          </tr>
+          <tr>
+            <td>Bank</td>
+            <td>SFP</td>
+            <td>Debtor</td>
+            <td>Edit</td>
+            <td>Delete</td>
+          </tr>
+
+
+
+
+          {{#each showData}}
+          <tr>
+            <td>{{this.description}}</td>
+            <td>{{this.account1}}</td>
+            <td>{{this.account2}}</td>
+            <td><a class="edit" href="/edit/{{this._id}}"><img class="editicon" src="/IMG/editicon.png"
+                  alt="" />Edit</a></td>
+            <td><a class="delete" href="/delete/{{this._id}}"> <img class="editicon" src="/IMG/deleteicon.png"
+                  alt="" />Delete</a></td>
+          </tr>
+          {{/each}}
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+  <script>
+    let commonValue = {
+      sfp: ['Assets', 'Equity & Liability'],
+      spl: ['sales', 'expenses', 'cash'],
+
+
+    }
+    function getSelectedValue(value) {
+      if (value.length == 0) {
+        document.getElementById('category').innerHTML = '<option> </option>'
+      }
+      else {
+        let commonOption = '';
+        for (categoryID in commonValue[value]) {
+          commonOption += "<option>" + commonValue[value][categoryID] + " <option/>"
+
+        }
+        document.getElementById('category').innerHTML = commonOption
+
+      }
+
+    }
+
+
+
+
+
+  </script>
+
+
+
+
+
+  <script>
+
+    const spl = document.getElementById('spl');
+    const sfl = document.getElementById('sfl');
+    const showdata = document.getElementById("showdata");
+
+    spl.addEventListener('click', () => {
+      showdata.innerHTML = `
+          <details>
+                  <h3 id="spl">Sales</h3>
+                  <h3 id="sfl">Income</h3>
+                  <h3 id="sfl">Cost Of Sales</h3>
+                  <h3 id="sfl">Expenses</h3>
+              
+                </details>
+          
+          `
+    })
+
+
+
+  </script>
+
+</body>
+
+</html>

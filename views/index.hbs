@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Accounting software</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    {{!-- navbar-section --}}
+    {{>navbar}}
+
+    {{!-- header section --}}
+    <header class="container headerSec">
+        <h2 class="heading">Sarathi - Your Accounting Partner</h2>
+        <p class="para">Get the most efficient way to manage accounting & finance for modern businesses</p>
+       <div class="logBtn">
+            <button class="btn demologin_btn">Explore Demo Account</button>
+            <button class="btn login_btn">Start 7 Day Free Tail</button>
+        </div>
+       <div class="main_img">
+         {{!-- <img class="main_img_bg" src="/IMG/mainbgimg.png" alt=""> --}}
+         <img class="main_img_bg" src="/IMG/mainbg.jpg" alt="">
+       </div>
+       <p class="para">Built in collaboration with Nepal's top accounting firms</p>
+    </header>
+
+{{!-- main section --}}
+    <main class="container news">
+        <div class="left-sec">
+            <h2 class="heading">Ready to meet the future of businesses?</h2>
+            <p class="para">The best time to upgrade to Tigg was yesterday. The second best time is now.</p>
+        </div>
+
+        <div class="right-sec">
+            <button class=" btn login_btn">Book Demo</button>
+        </div>
+    </main>
+
+    {{!-- nepal government section --}}
+
+    <section class="nepalGovr container">
+        <div class="leftsec">
+        <h1>IRD verified billing</h1>
+        <p>Our app is compliant with all the requirements of electronic billing procedure, 2074 (with Fourth Amendment)  (विद्युतीय बीजक सम्बन्धी कार्यविधि, २०७४ (चौथौ संसोधन सहित)).</p>
+            
+       <div class="logBtn">
+            <button class="btn demologin_btn">Learn More</button>
+        </div>
+        
+        </div>
+        <img class="nepalgovr_img" src="/IMG/secondimgnepalitext.png" alt="">
+    </section>
+
+    {{!-- product section --}}
+    <section class="container productsec">
+       
+        <div class="product">
+             <h1 class="heading">Product Highlights</h1>
+
+         <div class="logBtn">
+           <div class="productimglogo">
+             <h3 class="btn demologin_btn productimglogo" id="inventory">Inventory<img src="/IMG/productimg1.png" alt="img"></h3>             
+           </div>
+          
+
+         <div class="logBtn">
+           <div class="productimglogo">
+             <h3 class="btn demologin_btn productimglogo" id="accounting">Accounting<img src="/IMG/productimg2.png" alt="img"></h3>             
+           </div>
+
+         <div class="logBtn">
+           <div class="productimglogo">
+             <h3 class="btn demologin_btn productimglogo" id="report">Reports<img src="/IMG/productimg3.png" alt="img"></h3>             
+           </div>
+
+         <div class="logBtn">
+           <div class="productimglogo">
+             <h3 class="btn demologin_btn productimglogo" id="productivity">Productivity<img src="/IMG/productimg4.png" alt="img"></h3>             
+           </div>
+         <div class="logBtn">
+           <div class="productimglogo">
+             <h3 class="btn demologin_btn productimglogo" id="documents">Documents<img src="/IMG/productimg4.png" alt="img"></h3>             
+           </div>        
+            
+        </div>
+        
+        </div>
+    </section>
+    
+    <div class="contentAddingUsingJs container">
+       <p id="paragraph"></p>
+    </div>  {{!-- this is for adding data while some click on button --}}
+
+
+
+
+
+   
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {{!-- testing mode --}}
+       <div class="testing"></div>
+
+
+<script src="/JS/script.js"></script>
+<script src="/JS/navbar.js"></script>
+
+
+{{!-- <script>
+
+  const navlink = document.getElementById('navlink');
+  const menu = document.getElementById('menu');
+
+  menu.addEventListener('click',()=>{
+    navlink.classList.toggle('active');
+  })
+  
+
+
+</script> --}}
+
+
+   
+</body>
+</html>

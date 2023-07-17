@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/listchart.css">
+    <title>listChart</title>
+</head>
+<body>
+    <div class="list table container">
+        <h2>Chart of Account list</h2>
+
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th>Descriptioin</th>
+                    <th>Account Type 1</th>
+                    <th>Account Type 2</th>
+                    <th>Actions</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>staff Salary</td>
+                    <td>SPL</td>
+                    <td>Assets</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+                <tr>
+                    <td>Rent</td>
+                    <td>SPL</td>
+                    <td>Credior</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+                <tr>
+                    <td>Bank</td>
+                    <td>SFP</td>
+                    <td>Debtor</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+
+                 {{#each showData}}
+                <tr>
+                    <td>{{this.description}}</td>
+                    <td>{{this.account1}}</td>
+                    <td>{{this.account2}}</td>
+                    <td><a class="edit" href="/edit/{{this._id}}"> <img class="editicon" src="/IMG/editicon.png" alt=""> Edit</a> </td>
+                    <td><a class="delete" href="/delete/{{this._id}}"> <img class="editicon" src="/IMG/deleteicon.png" alt="">Delete</a></td>
+                   
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+               
+    </div>
+
+    <a class="container creteChartlink" href="/createChart">👉 Create chart of Accounts</a> 
+
+   
+
+    
+    
+</body>
+</html>

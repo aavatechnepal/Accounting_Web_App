@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new Journal</title>
+</head>
+
+<body>
+
+    <style>
+        form input,
+        select {
+            padding: 21px 46px;
+            margin: 24px;
+            outline: none;
+        }
+
+        .btn {
+            padding: 16px 63px;
+        }
+        .ledgerBtn{
+            padding: 16px 63px;
+            margin: 34px 0;
+        }
+    </style>
+
+
+    <h3>Create your Journal Below</h3>
+    <form action="/newJournal" method="post">
+        <div class="leftform">
+            <input type="text" name="journal1" id="" placeholder="Enter your Journal">
+            <select name="dr" id="">
+                <option value="dr">Dr.</option>
+                {{!-- <option value="cr">cr.</option> --}}
+                <input type="number" name="amount1" id="" placeholder="Enter your amount">
+            </select>
+        </div>
+
+        <div class="righform">
+            <input type="text" name="journal2" id="" placeholder="Enter your Journal">
+            <select name="cr" id="">
+                <option value="cr">Cr.</option>
+                <input type="number" name="amount2" id="" placeholder="Enter your amount">
+            </select>
+        </div>
+
+        <div class="msg">
+            {{message}}
+        </div>
+        <div class="error">
+            {{error}}
+        </div>
+
+
+        <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <button class="ledgerBtn"><a href="/newLedger">See Your Ledger</a></button>
+
+</body>               
+
+</html>         

@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up</title>
+    <link rel="stylesheet" href="/CSS/signup.css" />
+    <link rel="stylesheet" href="/CSS/style.css">
+  </head>
+  <body>
+
+    {{!-- <style>
+      .emailMsg{
+        color: red;
+        font-size: 19px;
+      }
+    </style> --}}
+
+    {{>navbar}}
+
+    <form action="/signup" method="post" class="signup">
+      <h3 class="heading">Create a new account </h3>
+      <p>This form is desing only for demo and testing purpose. <br>
+      form desing will be changed as per required..</p>
+
+          <p class="msg">{{message}}</p>
+          <p class="emailMsg">{{emailMsg}}</p>
+
+      <input type="text" name="name" id="" placeholder="Enter your Name"/>
+      <input type="email" name="email" id="" placeholder="Enter your Email"/>
+      <input type="password" name="password" id="" placeholder="Enter your Password"/>
+      <input type="password" name="confPassword" id="" placeholder="Enter your ConfPassword"/>
+      <input type="number" name="phone" id="" placeholder="Enter your Phone"/>
+      <button class="btn_signup">Signup</button>
+        <h4>Already have an Account ?<a href="/login">Login</a></h4>
+       
+        </form>
+        
+      <script src="/JS/navbar.js"></script>
+  </body>
+</html>
